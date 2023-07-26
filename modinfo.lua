@@ -14,7 +14,7 @@ api_version_dst = 10
 dst_compatible = true
 client_only_mod = false
 all_clients_require_mod = true
-priority = -1
+priority = 3
 
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
