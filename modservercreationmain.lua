@@ -52,5 +52,7 @@ scheduler:ExecuteInTime(0, function()  -- Delay a frame so we can get ServerCrea
         world_tab.choose_world_button:SetTextSize(19.6)
         world_tab.choose_world_button:SetText(STRINGS.UI.SANDBOXMENU.CHOOSEWORLD)
         world_tab.choose_world_button:SetPosition(460, 285)
+    elseif not world_tab.choose_world_button.shown then
+        world_tab.choose_world_button:Show()
     end
 end)
