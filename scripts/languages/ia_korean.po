@@ -1,0 +1,12 @@
+msgid ""
+msgstr ""
+"Language: ko\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT Version: 2.0"
+
+#. STRINGS.UI.SANDBOXMENU.CHOOSEWORLD
+msgctxt "STRINGS.UI.SANDBOXMENU.CHOOSEWORLD"
+msgid "choose the world"
+msgstr "세상을 선택하다"
+

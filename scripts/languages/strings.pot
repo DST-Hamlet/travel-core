@@ -1,0 +1,8 @@
+"Application: Dont' Starve\n"
+"POT Version: 2.0\n"
+
+#. STRINGS.UI.SANDBOXMENU.CHOOSEWORLD
+msgctxt "STRINGS.UI.SANDBOXMENU.CHOOSEWORLD"
+msgid "choose the world"
+msgstr ""
+
