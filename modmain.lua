@@ -6,7 +6,5 @@ IACore_CONFIG = {
     locale = GetModConfigData("locale", true),
 }
 
-IACore = {}
-
 modimport("main/toolutil")
 modimport("main/strings")

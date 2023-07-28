@@ -46,6 +46,13 @@ scheduler:ExecuteInTime(0, function()  -- Delay a frame so we can get ServerCrea
     end
 
     for i, world_tab in ipairs(servercreationscreen.world_tabs) do
+        if servercreationscreen:CanResume() and world_tab:GetLocation() ~= SERVER_LEVEL_LOCATIONS[i] then
+            SERVER_LEVEL_LOCATIONS[i] = world_tab:GetLocation()
+            servercreationscreen.world_tabs[i]:RefreshOptionItems()
+            local text = servercreationscreen.world_tabs[i]:GetLocationTabName()
+            servercreationscreen.world_config_tabs.menu.items[i + 1]:SetText(text)
+        end
+
         if not world_tab.choose_world_button then
             world_tab.choose_world_button = world_tab.settings_root:AddChild(ImageButton("images/global_redux.xml", "button_carny_long_normal.tex", "button_carny_long_hover.tex", "button_carny_long_disabled.tex", "button_carny_long_down.tex"))
 
