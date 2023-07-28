@@ -15,9 +15,9 @@ local languages = {
     pl = "polish",  -- polish
     ru = "russian",  -- russian
     zh = "chinese_s",  -- chinese
-    chs = "chinese_s", --chinese mod
-    sc = "chinese_s", --simple chinese
-    tc = "chinese_t", --traditional chinese
+    chs = "chinese_s", -- chinese mod
+    sc = "chinese_s", -- simple chinese
+    tc = "chinese_t", -- traditional chinese
     cht = "chinese_t",  -- traditional chinese
 }
 
@@ -84,19 +84,23 @@ if not IsTheFrontEnd then
 end
 
 local desiredlang = nil
-local PL_CONFIG = rawget(_G, "PL_CONFIG")
-if PL_CONFIG and PL_CONFIG.locale then
-    desiredlang = PL_CONFIG.locale
-elseif (IsTheFrontEnd or PL_CONFIG) and LanguageTranslator.defaultlang then  -- only use default in FrontEnd or if locale is not set
+local IACore_CONFIG = rawget(_G, "IACore_CONFIG")
+if IACore_CONFIG and IACore_CONFIG.locale then
+    desiredlang = IACore_CONFIG.locale
+elseif (IsTheFrontEnd or IACore_CONFIG) and LanguageTranslator.defaultlang then  -- only use default in FrontEnd or if locale is not set
     desiredlang = LanguageTranslator.defaultlang
 end
 
-if desiredlang and languages[desiredlang] then
-    local temp_lang = desiredlang .. "_temp"
+function IACore.IA_LoadPOFile(path)
+    if desiredlang and languages[desiredlang] then
+        local temp_lang = desiredlang .. "_temp"
 
-    LanguageTranslator:LoadPOFile("scripts/languages/ia_" .. languages[desiredlang] .. ".po", temp_lang)
-    ToolUtil.merge_table(LanguageTranslator.languages[desiredlang], LanguageTranslator.languages[temp_lang])
-    TranslateStringTable(STRINGS)
-    LanguageTranslator.languages[temp_lang] = nil
-    LanguageTranslator.defaultlang = desiredlang
+        IAENV.LoadPOFile(path .. languages[desiredlang] .. ".po", temp_lang)
+        ToolUtil.merge_table(LanguageTranslator.languages[desiredlang], LanguageTranslator.languages[temp_lang])
+        TranslateStringTable(STRINGS)
+        LanguageTranslator.languages[temp_lang] = nil
+        LanguageTranslator.defaultlang = desiredlang
+    end
 end
+
+IACore.IA_LoadPOFile("scripts/languages/ia_")

@@ -6,11 +6,13 @@ if IsTheFrontEnd then
     return
 end
 
+IACore = {}
+
 -- when start worldgen
 require("map/ia_storygen")
 
 modimport("main/toolutil")
-
+modimport("main/tiledefs")
 modimport("postinit/map/task")
 modimport("postinit/map/graph")
 modimport("postinit/map/node")

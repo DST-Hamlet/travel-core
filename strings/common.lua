@@ -1,7 +1,7 @@
 return {
     UI = {
         SANDBOXMENU = {
-            CHOOSEWORLD = "choose the world",
+            CHOOSEWORLD = "Choose World",
         },
     },
 }

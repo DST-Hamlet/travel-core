@@ -3,6 +3,5 @@
 
 #. STRINGS.UI.SANDBOXMENU.CHOOSEWORLD
 msgctxt "STRINGS.UI.SANDBOXMENU.CHOOSEWORLD"
-msgid "choose the world"
+msgid "Choose World"
 msgstr ""
-

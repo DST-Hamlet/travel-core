@@ -2,28 +2,35 @@ local modname = modname
 local modimport = modimport
 GLOBAL.setfenv(1, GLOBAL)
 
+IACore = {}
+
 modimport("main/toolutil")
 modimport("main/strings")
 modimport("modfrontendmain")
-modimport("modcustonsizitems")
 
 local Menu = require("widgets/menu")
 local ImageButton = require("widgets/imagebutton")
 local PopupDialogScreen = require("screens/redux/popupdialog")
 
-WorldLocations = {FOREST = true, CAVE = true}
+IACore.WorldLocations = {
+    [1] = {FOREST = true, CAVE = true},
+    [2] = {CAVE = true},
+}
 
-local function SetLevelLocations(servercreationscreen, location)
-    servercreationscreen:SetLevelLocations({location, "cave"})
-    local text = servercreationscreen.world_tabs[1]:GetLocationTabName()
-    servercreationscreen.world_config_tabs.menu.items[2]:SetText(text)
+function IACore.SetLevelLocations(servercreationscreen, location, i)
+    local server_level_locations = {}
+    server_level_locations[i] = location
+    server_level_locations[3 - i] = SERVER_LEVEL_LOCATIONS[3 - i]
+    servercreationscreen:SetLevelLocations(server_level_locations)
+    local text = servercreationscreen.world_tabs[i]:GetLocationTabName()
+    servercreationscreen.world_config_tabs.menu.items[i + 1]:SetText(text)
 end
 
-local function ChooseWorld(world_tab, servercreationscreen)
+local function ChooseWorld(i, world_tab, servercreationscreen)
     local menuitems = {}
-    for location, val in pairs(WorldLocations) do
+    for location, val in pairs(IACore.WorldLocations[i]) do
         table.insert(menuitems, {text = STRINGS.UI.SANDBOXMENU.LOCATIONTABNAME[location], cb = function()
-            SetLevelLocations(servercreationscreen, location:lower())
+            IACore.SetLevelLocations(servercreationscreen, location:lower(), i)
             TheFrontEnd:PopScreen()
         end, style = "carny_long"})
     end
@@ -38,21 +45,21 @@ scheduler:ExecuteInTime(0, function()  -- Delay a frame so we can get ServerCrea
         return
     end
 
-    local world_tab = servercreationscreen.world_tabs[1]
+    for i, world_tab in ipairs(servercreationscreen.world_tabs) do
+        if not world_tab.choose_world_button then
+            world_tab.choose_world_button = world_tab.settings_root:AddChild(ImageButton("images/global_redux.xml", "button_carny_long_normal.tex", "button_carny_long_hover.tex", "button_carny_long_disabled.tex", "button_carny_long_down.tex"))
 
-    if not world_tab.choose_world_button then
-        world_tab.choose_world_button = world_tab:AddChild(ImageButton("images/global_redux.xml", "button_carny_long_normal.tex", "button_carny_long_hover.tex", "button_carny_long_disabled.tex", "button_carny_long_down.tex"))
-
-        world_tab.choose_world_button.image:SetScale(.49)
-        world_tab.choose_world_button:SetFont(CHATFONT)
-        world_tab.choose_world_button.text:SetColour(0, 0, 0, 1)
-        world_tab.choose_world_button:SetOnClick(function(self, ...)
-            ChooseWorld(world_tab, servercreationscreen)
-        end)
-        world_tab.choose_world_button:SetTextSize(19.6)
-        world_tab.choose_world_button:SetText(STRINGS.UI.SANDBOXMENU.CHOOSEWORLD)
-        world_tab.choose_world_button:SetPosition(460, 285)
-    elseif not world_tab.choose_world_button.shown then
-        world_tab.choose_world_button:Show()
+            world_tab.choose_world_button.image:SetScale(.47)
+            world_tab.choose_world_button:SetFont(CHATFONT)
+            world_tab.choose_world_button.text:SetColour(0, 0, 0, 1)
+            world_tab.choose_world_button:SetOnClick(function(self, ...)
+                ChooseWorld(i, world_tab, servercreationscreen)
+            end)
+            world_tab.choose_world_button:SetTextSize(19.6)
+            world_tab.choose_world_button:SetText(STRINGS.UI.SANDBOXMENU.CHOOSEWORLD)
+            world_tab.choose_world_button:SetPosition(320, 285)
+        elseif not world_tab.choose_world_button.shown then
+            world_tab.choose_world_button:Show()
+        end
     end
 end)
