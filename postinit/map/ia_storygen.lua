@@ -1,3 +1,5 @@
+GLOBAL.setfenv(1, GLOBAL)
+
 require("map/storygen")
 
 function Story:GenerateIslandFromTask(task, randomize)

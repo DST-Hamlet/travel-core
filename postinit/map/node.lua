@@ -3,6 +3,9 @@ GLOBAL.setfenv(1, GLOBAL)
 
 require("map/graphnode")
 
+local obj_layout = require("map/ia_object_layout")
+local SpawnUtil = require("map/spawnutil")
+
 -- local NodeAddEntity = Node.AddEntity
 -- Node.AddEntity = function(self, prefab, points_x, points_y, current_pos_idx, entitiesOut, ...)
 --     if IA_worldtype ~= "shipwrecked" then
@@ -30,7 +33,6 @@ function Node:IAConvertGround(spawnFn, entitiesOut, width, height, world_gen_cho
         return
     end
 
-    local obj_layout = require("map/object_layout")
     local prefab_list = {}
 
     local area = WorldSim:GetSiteArea(self.id)
@@ -52,7 +54,7 @@ function Node:IAConvertGround(spawnFn, entitiesOut, width, height, world_gen_cho
 
             if layout.water and (self.data.type == nil or self.data.type ~= "water") then
                 for i = 1, count do
-                    PlaceWaterLayout(layout, prefabs, add_fn, checkFn)
+                    obj_layout.PlaceWaterLayout(layout, prefabs, add_fn, checkFn)
                 end
             else
                 layout.border = layout.border or border
@@ -68,7 +70,7 @@ function Node:IAConvertGround(spawnFn, entitiesOut, width, height, world_gen_cho
             local layout = obj_layout.LayoutForDefinition(layoutname)
             local prefabs = obj_layout.ConvertLayoutToEntitylist(layout)
             if layout.water and (self.data.type == nil or self.data.type ~= "water") then
-                PlaceWaterLayout(layout, prefabs, add_fn, checkFn)
+                obj_layout.PlaceWaterLayout(layout, prefabs, add_fn, checkFn)
             else
                 layout.border = layout.border or border
                 obj_layout.ReserveAndPlaceLayout(self.id, layout, prefabs, add_fn)

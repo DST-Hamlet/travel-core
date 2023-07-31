@@ -1,4 +1,3 @@
-local AddTile = AddTile
 local NoiseFunctions = require("noisetilefunctions")
 local ChangeTileRenderOrder = ChangeTileRenderOrder
 GLOBAL.setfenv(1, GLOBAL)
@@ -20,14 +19,16 @@ IACore.TileRanges =
     IMPASSABLE = "IMPASSABLE",
 }
 
-function IACore.IA_Add_Tile(tiledefs)
+function IACore.IA_Add_Tile(tiledefs, addtilefn)
+    local is_worldgen = rawget(_G, "WORLDGEN_MAIN") ~= nil
+
     for tile, def in pairs(tiledefs) do
         local range = def.tile_range
         if type(range) == "function" then
             range = IACore.TileRanges.NOISE
         end
 
-        AddTile(tile, range, def.tile_data, def.ground_tile_def, def.minimap_tile_def, def.turf_def)
+        addtilefn(tile, range, def.tile_data, def.ground_tile_def, def.minimap_tile_def, def.turf_def)
 
         local tile_id = WORLD_TILES[tile]
 
