@@ -33,7 +33,7 @@ function ToolUtil.SetUpvalue(fn, value, name, recurse_levels)
     debug.setupvalue(source_fn, i, value)
 end
 
-function ToolUtil.RegisterInventoryAtlas(atlas_path)
+function ToolUtil.RegisterImageAtlas(atlas_path)
     local atlas = resolvefilepath(atlas_path)
 
     local file = io.open(atlas, "r")
