@@ -8,3 +8,4 @@ IACore_CONFIG = {
 
 modimport("main/toolutil")
 modimport("main/strings")
+modimport("main/postinit")
