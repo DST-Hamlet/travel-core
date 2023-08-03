@@ -14,9 +14,11 @@ local components_post = {
 }
 
 local prefabs_post = {
-}
-
-local batch_prefabs_post = {
+    "buff_workeffectiveness",
+    "player_classified",
+    "player",
+    "poisonable",
+    "woodie",
 }
 
 local scenarios_post = {
@@ -44,10 +46,6 @@ end
 
 for _, file_name in ipairs(prefabs_post) do
     modimport("postinit/prefabs/" .. file_name)
-end
-
-for _, file_name in ipairs(batch_prefabs_post) do
-    modimport("postinit/batchprefabs/" .. file_name)
 end
 
 for _, file_name in ipairs(scenarios_post) do

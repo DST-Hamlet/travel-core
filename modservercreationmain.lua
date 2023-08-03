@@ -7,6 +7,7 @@ IACore = {}
 modimport("main/toolutil")
 modimport("main/strings")
 modimport("modfrontendmain")
+modimport("modcustonsizitems")
 
 local Menu = require("widgets/menu")
 local ImageButton = require("widgets/imagebutton")

@@ -5,7 +5,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT Version: 2.0"
 
+#. STRINGS.UI.CUSTOMIZATIONSCREEN.POISON
+msgctxt "STRINGS.UI.CUSTOMIZATIONSCREEN.POISON"
+msgid "Poison"
+msgstr "Trucizna"
+
 #. STRINGS.UI.SANDBOXMENU.CHOOSEWORLD
 msgctxt "STRINGS.UI.SANDBOXMENU.CHOOSEWORLD"
 msgid "Choose World"
 msgstr "wybierz świat"
+

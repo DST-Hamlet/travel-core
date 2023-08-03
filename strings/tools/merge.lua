@@ -159,6 +159,7 @@ for l, file_name in pairs(languages) do
     local po_file_name = l == "en" and "strings.pot" or (file_prefix .. file_name .. ".po")
     local pl_file = io.open(output_potpath .. po_file_name, "w+")
     pl_file:write(package)
+    pl_file:write("\n")
     pl_file:close()
 end
 
