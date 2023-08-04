@@ -4,10 +4,14 @@ package.path = package.path .. ";../?.lua"
 package.path = package.path .. ";".. ds_path .. "/data/scripts" .. "/?.lua"
 
 keys = {  -- copy key = over key
-    -- ["kraken"] = "kraken1",
+    ["MACHETE"] = "MACHETE",
+    ["GOLDENMACHETE"] = "GOLDENMACHETE",
 }
 
 input_strings = {
+    ACTIONS = {
+    },
+
     UI = {
     },
 
@@ -47,16 +51,20 @@ require("strings")
 data = {  -- lua file path = po file path
     -- {
     --     "F:/STEAM/steamapps/common/Don't Starve Together/mods/IslandAdventures/strings/",
-    --     "F:/STEAM/steamapps/common/Don't Starve Together/modsIslandAdventures/languages/"
+    --     "F:/STEAM/steamapps/common/Don't Starve Together/mods/IslandAdventures/languages/"
     -- },
-    {  -- ds file path
-        STRINGS,
-        ds_path .. "/data/scripts/languages/",
+    -- {  -- ds file path
+    --     STRINGS,
+    --     ds_path .. "/data/scripts/languages/",
+    --     override = false,
+    -- },
+    {
+        input_strings,  -- input string
+        "en",  -- input language , use Google Translate
         override = false,
     },
     {
-        input_strings,  -- input string
-        "zh-CN",  -- input language , use Google Translate
-        override = false,
+        "D:/Steam/steamapps/common/Don't Starve Together/mods/PorkLand/strings/",
+        "D:/Steam/steamapps/common/Don't Starve Together/mods/PorkLand/scripts/languages/pl_"
     }
 }
