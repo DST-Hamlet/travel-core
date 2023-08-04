@@ -4,8 +4,8 @@ package.path = package.path .. ";../?.lua"
 package.path = package.path .. ";".. ds_path .. "/data/scripts" .. "/?.lua"
 
 keys = {  -- copy key = over key
-    ["MACHETE"] = "MACHETE",
-    ["GOLDENMACHETE"] = "GOLDENMACHETE",
+    -- ["MACHETE"] = "MACHETE",
+    -- ["GOLDENMACHETE"] = "GOLDENMACHETE",
 }
 
 input_strings = {
@@ -63,8 +63,8 @@ data = {  -- lua file path = po file path
         "en",  -- input language , use Google Translate
         override = false,
     },
-    {
-        "D:/Steam/steamapps/common/Don't Starve Together/mods/PorkLand/strings/",
-        "D:/Steam/steamapps/common/Don't Starve Together/mods/PorkLand/scripts/languages/pl_"
-    }
+    -- {
+    --     "D:/Steam/steamapps/common/Don't Starve Together/mods/PorkLand/strings/",
+    --     "D:/Steam/steamapps/common/Don't Starve Together/mods/PorkLand/scripts/languages/pl_"
+    -- }
 }
