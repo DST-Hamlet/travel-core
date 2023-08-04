@@ -1,1 +1,6 @@
-return {}
+return {
+    DESCRIBE = {
+        GOLDENMACHETE = "AN OSTENTATIOUS HACKING DEVICE",
+        MACHETE = "A LONG BLADE FOR EXPERT HACKING",
+    },
+}

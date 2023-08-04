@@ -1,2 +1,4 @@
 GLOBAL.setfenv(1, GLOBAL)
 
+TOOLACTIONS.HACK = true
+TOOLACTIONS.SHEAR = true

@@ -1,0 +1,7 @@
+<Atlas>
+    <Texture filename="ia_inventoryimages.tex" />
+    <Elements>
+        <Element name="goldenmachete.tex" u1="0.00390625" v1="0.0078125" u2="0.49609375" v2="0.9921875" />
+        <Element name="machete.tex" u1="0.50390625" v1="0.0078125" u2="0.99609375" v2="0.9921875" />
+    </Elements>
+</Atlas>

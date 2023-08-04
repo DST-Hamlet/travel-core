@@ -5,6 +5,256 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT Version: 2.0"
 
+#. STRINGS.ACTIONS.HACK
+msgctxt "STRINGS.ACTIONS.HACK"
+msgid "HACK"
+msgstr "Cortar a tajos"
+
+#. STRINGS.ACTIONS.SHEAR
+msgctxt "STRINGS.ACTIONS.SHEAR"
+msgid "Shear"
+msgstr "Esquilar"
+
+#. STRINGS.CHARACTERS.GENERIC.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.GENERIC.DESCRIBE.GOLDENMACHETE"
+msgid "Hack in style!"
+msgstr "¡Corta con estilo!"
+
+#. STRINGS.CHARACTERS.GENERIC.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.GENERIC.DESCRIBE.MACHETE"
+msgid "I like the cut of this blade."
+msgstr "Me gusta cómo corta esta hoja."
+
+#. STRINGS.CHARACTERS.WAGSTAFF.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WAGSTAFF.DESCRIBE.GOLDENMACHETE"
+msgid "Gold is so plentiful here I can use it in household tools."
+msgstr "Aquí abunda tanto el oro que puedo usarlo para herramientas caseras."
+
+#. STRINGS.CHARACTERS.WAGSTAFF.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WAGSTAFF.DESCRIBE.MACHETE"
+msgid "A pragmatic tool for slashing objects."
+msgstr "Una pragmática herramienta para cortar objetos."
+
+#. STRINGS.CHARACTERS.WALANI.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WALANI.DESCRIBE.GOLDENMACHETE"
+msgid "I can hack in style."
+msgstr "Puedo cortar con estilo."
+
+#. STRINGS.CHARACTERS.WALANI.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WALANI.DESCRIBE.MACHETE"
+msgid "What a hack job."
+msgstr "Qué trabajo más cortante."
+
+#. STRINGS.CHARACTERS.WALTER.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WALTER.DESCRIBE.GOLDENMACHETE"
+msgid "Hack in style!"
+msgstr "¡Hackea con estilo!"
+
+#. STRINGS.CHARACTERS.WALTER.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WALTER.DESCRIBE.MACHETE"
+msgid "I like the cut of this blade."
+msgstr "Me gusta el corte de esta hoja."
+
+#. STRINGS.CHARACTERS.WANDA.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WANDA.DESCRIBE.GOLDENMACHETE"
+msgid "What else do you do with gold in a jungle island?"
+msgstr "¿Qué más haces con el oro en una isla selvática?"
+
+#. STRINGS.CHARACTERS.WANDA.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WANDA.DESCRIBE.MACHETE"
+msgid "It's for chopping, simple as that."
+msgstr "Es para picar, así de sencillo."
+
+#. STRINGS.CHARACTERS.WARLY.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WARLY.DESCRIBE.GOLDENMACHETE"
+msgid "Fancy slicer."
+msgstr "Un cortador bonito."
+
+#. STRINGS.CHARACTERS.WARLY.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WARLY.DESCRIBE.MACHETE"
+msgid "I could chop many an onion with this!"
+msgstr "¡Podría cortar un montón de cebollas con esto!"
+
+#. STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.GOLDENMACHETE"
+msgid "I shall swing you with pride."
+msgstr "Te blandiré con orgullo."
+
+#. STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.MACHETE"
+msgid "A fine length of blade."
+msgstr "Una espada de buena longitud."
+
+#. STRINGS.CHARACTERS.WAXWELL.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WAXWELL.DESCRIBE.GOLDENMACHETE"
+msgid "I've always wanted to hack things in luxury."
+msgstr "Siempre he querido cortar cosas de forma lujosa."
+
+#. STRINGS.CHARACTERS.WAXWELL.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WAXWELL.DESCRIBE.MACHETE"
+msgid "Truthfully I was always a hack."
+msgstr "La verdad, siempre fui un hacha."
+
+#. STRINGS.CHARACTERS.WEBBER.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WEBBER.DESCRIBE.GOLDENMACHETE"
+msgid "What a beautiful blade!"
+msgstr "¡Qué hoja más bonita!"
+
+#. STRINGS.CHARACTERS.WEBBER.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WEBBER.DESCRIBE.MACHETE"
+msgid "Hyah! Hyah!"
+msgstr "¡Jiá! ¡Jiá!"
+
+#. STRINGS.CHARACTERS.WENDY.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WENDY.DESCRIBE.GOLDENMACHETE"
+msgid "What a fancy blade to ruin bamboo with!"
+msgstr "¡Qué hoja más lujosa para destrozar el bambú!"
+
+#. STRINGS.CHARACTERS.WENDY.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WENDY.DESCRIBE.MACHETE"
+msgid "This is a lot of blade."
+msgstr "Es una espada muy grande."
+
+#. STRINGS.CHARACTERS.WHEELER.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WHEELER.DESCRIBE.GOLDENMACHETE"
+msgid "For the sophisticated adventurer."
+msgstr "Para aventureros sofisticados."
+
+#. STRINGS.CHARACTERS.WHEELER.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WHEELER.DESCRIBE.MACHETE"
+msgid "Machete. Designed for adventure."
+msgstr "Machete. Diseñado para aventuras."
+
+#. STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.GOLDENMACHETE"
+msgid "The most malleable of metals, but let's see how it slices."
+msgstr "El más maleable de todos los metales, pero vamos a ver cómo corta."
+
+#. STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.MACHETE"
+msgid "Used for hacking through the brush."
+msgstr "Se usar para abrirse paso a través de la maleza."
+
+#. STRINGS.CHARACTERS.WILBA.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WILBA.DESCRIBE.GOLDENMACHETE"
+msgid "'TIS SHINY TOOL O' SLASHINGS"
+msgstr "HERRAMIENTA RELUCIENTE PARA CORTAR"
+
+#. STRINGS.CHARACTERS.WILBA.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WILBA.DESCRIBE.MACHETE"
+msgid "YON SLASHY TOOL"
+msgstr "HERRAMIENTA CORTANTE"
+
+#. STRINGS.CHARACTERS.WILLOW.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WILLOW.DESCRIBE.GOLDENMACHETE"
+msgid "I don't want to scuff it up."
+msgstr "No quiero rayarlo."
+
+#. STRINGS.CHARACTERS.WILLOW.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WILLOW.DESCRIBE.MACHETE"
+msgid "Or I could just burn my way through."
+msgstr "O puedo también abrirme paso con fuego."
+
+#. STRINGS.CHARACTERS.WINONA.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WINONA.DESCRIBE.GOLDENMACHETE"
+msgid "This just made my job easier."
+msgstr "Esto solo hizo mi trabajo más fácil."
+
+#. STRINGS.CHARACTERS.WINONA.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WINONA.DESCRIBE.MACHETE"
+msgid "Hack and slash! Working's always fun."
+msgstr "¡Cortar y tajar! Trabajar siempre es divertido."
+
+#. STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.GOLDENMACHETE"
+msgid "Hoighty toighty knife!"
+msgstr "¡Superpoderoso cuchillo!"
+
+#. STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.MACHETE"
+msgid "Ah! Very good!"
+msgstr "¡Ah! ¡Muy bien!"
+
+#. STRINGS.CHARACTERS.WOODIE.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WOODIE.DESCRIBE.GOLDENMACHETE"
+msgid "It chops AND sparkles!"
+msgstr "¡Corta Y brilla!"
+
+#. STRINGS.CHARACTERS.WOODIE.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WOODIE.DESCRIBE.MACHETE"
+msgid "Ooh, that's a thing for chopping."
+msgstr "Ohhh, esto sí que vale para talar."
+
+#. STRINGS.CHARACTERS.WOODLEGS.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WOODLEGS.DESCRIBE.GOLDENMACHETE"
+msgid "'Tis a mighty 'eavy blade."
+msgstr "Es una espada pesada y poderosa."
+
+#. STRINGS.CHARACTERS.WOODLEGS.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WOODLEGS.DESCRIBE.MACHETE"
+msgid "Ye be slicin'!"
+msgstr "¡Corta, corta!"
+
+#. STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.GOLDENMACHETE"
+msgid "Pretty Slicer"
+msgstr "Bonito cortador"
+
+#. STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.MACHETE"
+msgid "Slicer. For friend haircuts"
+msgstr "Cortador. Para cortar el pelo a los amigos"
+
+#. STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WORTOX.DESCRIBE.GOLDENMACHETE"
+msgid "Fit for a sophisticated imp!"
+msgstr "¡Apto para un diablillo sofisticado!"
+
+#. STRINGS.CHARACTERS.WORTOX.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WORTOX.DESCRIBE.MACHETE"
+msgid "To chop and slash!"
+msgstr "¡Para picar y rajar!"
+
+#. STRINGS.CHARACTERS.WURT.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WURT.DESCRIBE.GOLDENMACHETE"
+msgid "It better than normal hacker."
+msgstr "Es mejor que un hacker normal."
+
+#. STRINGS.CHARACTERS.WURT.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WURT.DESCRIBE.MACHETE"
+msgid "Plant hacker."
+msgstr "hacker de plantas."
+
+#. STRINGS.CHARACTERS.WX78.DESCRIBE.GOLDENMACHETE
+msgctxt "STRINGS.CHARACTERS.WX78.DESCRIBE.GOLDENMACHETE"
+msgid "AN OSTENTATIOUS HACKING DEVICE"
+msgstr "UN DISPOSITIVO OSTENTOSAMENTE CORTANTE"
+
+#. STRINGS.CHARACTERS.WX78.DESCRIBE.MACHETE
+msgctxt "STRINGS.CHARACTERS.WX78.DESCRIBE.MACHETE"
+msgid "A LONG BLADE FOR EXPERT HACKING"
+msgstr "UNA HOJA LARGA PARA CORTAR COMO UN EXPERTO"
+
+#. STRINGS.NAMES.GOLDENMACHETE
+msgctxt "STRINGS.NAMES.GOLDENMACHETE"
+msgid "Luxury Machete"
+msgstr "Machete lujoso"
+
+#. STRINGS.NAMES.MACHETE
+msgctxt "STRINGS.NAMES.MACHETE"
+msgid "Machete"
+msgstr "Machete"
+
+#. STRINGS.RECIPE_DESC.GOLDENMACHETE
+msgctxt "STRINGS.RECIPE_DESC.GOLDENMACHETE"
+msgid "Hack stuff in STYLE!"
+msgstr "¡Corta cosas con ESTILO!"
+
+#. STRINGS.RECIPE_DESC.MACHETE
+msgctxt "STRINGS.RECIPE_DESC.MACHETE"
+msgid "Hack stuff!"
+msgstr "¡Arma para cortar!"
+
 #. STRINGS.UI.CUSTOMIZATIONSCREEN.POISON
 msgctxt "STRINGS.UI.CUSTOMIZATIONSCREEN.POISON"
 msgid "Poison"
@@ -14,4 +264,5 @@ msgstr "Veneno"
 msgctxt "STRINGS.UI.SANDBOXMENU.CHOOSEWORLD"
 msgid "Choose World"
 msgstr "elige el mundo"
+
 

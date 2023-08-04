@@ -1,5 +1,6 @@
 -- Update this list when adding files
 local components_post = {
+    "actionqueuer",
     "clock",
     "colourcube",
     "combat",
@@ -22,9 +23,12 @@ local prefabs_post = {
 }
 
 local scenarios_post = {
+    "playerhud"
 }
 
 local stategraphs_post = {
+    "wilson",
+    "wilson_client"
 }
 
 local brains_post = {

@@ -240,5 +240,6 @@ end
 function write_lua_table(path, t)
     local file = io.open(path, "w+")
     file:write("return " .. table_to_string(t))
+    file:write("\n")
     file:close()
 end

@@ -15,7 +15,9 @@ modimport("main/commands")
 modimport("main/standardcomponents")
 
 modimport("main/assets")
+modimport("main/fx")
 modimport("main/strings")
-modimport("main/postinit")
 
 modimport("main/worldsettings_overrides")
+modimport("main/actions")
+modimport("main/postinit")

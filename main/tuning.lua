@@ -7,8 +7,8 @@ local wilson_attack = TUNING.SPEAR_DAMAGE
 local tuning = {
     MAPWRAPPER_WARN_RANGE = 14,
 
-    SHEARS_DAMAGE = wilson_attack * .5,
-    SHEARS_USES = 20,
+    MACHETE_DAMAGE = wilson_attack * .88,
+    MACHETE_USES = 100,
 
     POISON_PERISH_PENALTY = 0.5,
     POISON_HUNGER_DRAIN_MOD = 0.80,
