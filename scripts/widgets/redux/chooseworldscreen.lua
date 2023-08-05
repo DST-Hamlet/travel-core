@@ -1,8 +1,8 @@
-local Widget = require "widgets/widget"
-local Screen = require "widgets/screen"
-local TEMPLATES = require "widgets/redux/templates"
-local Text = require "widgets/text"
-local Image = require "widgets/image"
+local Widget = require("widgets/widget")
+local Screen = require("widgets/screen")
+local TEMPLATES = require("widgets/redux/templates")
+local Text = require("widgets/text")
+local Image = require("widgets/image")
 
 local window_width = 400
 local window_height = 550
@@ -18,9 +18,14 @@ local peek_height = math.abs(num_rows * padded_height - 500)
 
 local dialog_width = window_width + 72
 local dialog_height = window_height + 4
-local r,g,b = unpack(UICOLOURS.BROWN_DARK)
+local r, g, b = unpack(UICOLOURS.BROWN_DARK)
 
-local apply_str = STRINGS.UI.HELP.APPLY .. " World"
+local apply_str = STRINGS.UI.HELP.APPLY
+
+STRINGS.UI.CUSTOMIZATIONSCREEN.PRESETLEVELDESC = {
+    FOREST = STRINGS.UI.CUSTOMIZATIONSCREEN.PRESETLEVELDESC.SURVIVAL_TOGETHER,
+    CAVE = STRINGS.UI.CUSTOMIZATIONSCREEN.PRESETLEVELDESC.DST_CAVE,
+}
 
 local ChooseWorldSreen = Class(Screen, function(self, parent_widget, currentworld, i)
     Screen._ctor(self, "ChooseWorldSreen")
@@ -35,7 +40,7 @@ local ChooseWorldSreen = Class(Screen, function(self, parent_widget, currentworl
     self.bg = self.root:AddChild(TEMPLATES.BackgroundTint(0.7))
 
     self.dialog_bg = self.root:AddChild(TEMPLATES.PlainBackground())
-    self.dialog_bg:SetScissor(-dialog_width/2, -dialog_height/2, dialog_width, dialog_height)
+    self.dialog_bg:SetScissor(-dialog_width / 2, -dialog_height / 2, dialog_width, dialog_height)
 
     self.dialog = self.root:AddChild(TEMPLATES.RectangleWindow(window_width, window_height))
     self.dialog:SetBackgroundTint(r,g,b, 0.6)
@@ -54,7 +59,7 @@ local ChooseWorldSreen = Class(Screen, function(self, parent_widget, currentworl
     self.world_label:SetPosition(0, 250)
 
     self.horizontal_line = self.root:AddChild(Image("images/global_redux.xml", "item_divider.tex"))
-    self.horizontal_line:SetPosition(0,window_height/2 - 48)
+    self.horizontal_line:SetPosition(0, window_height / 2 - 48)
     self.horizontal_line:SetSize(dialog_width, 5)
 
     for k, v in pairs(self.locations[self.index]) do
@@ -85,12 +90,12 @@ local ChooseWorldSreen = Class(Screen, function(self, parent_widget, currentworl
         world.name = world.backing:AddChild(Text(CHATFONT, 26))
         world.name:SetHAlign(ANCHOR_LEFT)
         world.name:SetRegionSize(padded_width - 40, 30)
-        world.name:SetPosition(0, padded_height/2 - 22.5)
+        world.name:SetPosition(0, padded_height / 2 - 22.5)
 
         world.desc = world.backing:AddChild(Text(CHATFONT, 16))
         world.desc:SetVAlign(ANCHOR_MIDDLE)
         world.desc:SetHAlign(ANCHOR_LEFT)
-        world.desc:SetPosition(0, padded_height/2 -(20 + 26 + 10))
+        world.desc:SetPosition(0, padded_height / 2 - (20 + 26 + 10))
 
         world.focus_forward = world.backing
 

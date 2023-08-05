@@ -8,12 +8,12 @@ modimport("main/toolutil")
 modimport("main/strings")
 modimport("modfrontendmain")
 
-local TEMPLATES = require "widgets/redux/templates"
-local PopupDialogScreen = require "screens/redux/popupdialog"
-local ChooseWorldSreen = require "widgets/redux/chooseworldscreen"
+local TEMPLATES = require("widgets/redux/templates")
+local PopupDialogScreen = require("screens/redux/popupdialog")
+local ChooseWorldSreen = require("widgets/redux/chooseworldscreen")
 
 IACore.WorldLocations = {
-    [1] = {CAVE = true, FOREST = true},
+    [1] = {FOREST = true, CAVE = true},
     [2] = {CAVE = true}
 }
 
@@ -27,18 +27,12 @@ function IACore.SetLevelLocations(servercreationscreen, location, i)
 end
 
 local function OnWorldButton(world_tab, i)
-    if world_tab.settings_widget:IsNewShard() then
-        if world_tab:GetParentScreen() then
-            world_tab:GetParentScreen().last_focus = TheFrontEnd:GetFocusWidget()
-        end
-        local currentworld = world_tab:GetLocation()
-        local chooseworldscreen = ChooseWorldSreen(world_tab, currentworld, i)
-        TheFrontEnd:PushScreen(chooseworldscreen)
-    else
-        local cancel_button = {{text = STRINGS.UI.LOBBYSCREEN.CANCEL, cb = function() TheFrontEnd:PopScreen() end, style = "carny_long"}}
-        local popupdialogscreen = PopupDialogScreen(STRINGS.UI.SANDBOXMENU.CHOSENWORLD, STRINGS.UI.CUSTOMIZATIONSCREEN.CHOSENWORLD, cancel_button)
-        TheFrontEnd:PushScreen(popupdialogscreen)
+    if world_tab:GetParentScreen() then
+        world_tab:GetParentScreen().last_focus = TheFrontEnd:GetFocusWidget()
     end
+    local currentworld = world_tab:GetLocation()
+    local chooseworldscreen = ChooseWorldSreen(world_tab, currentworld, i)
+    TheFrontEnd:PushScreen(chooseworldscreen)
 end
 
 scheduler:ExecuteInTime(0, function()  -- Delay a frame so we can get ServerCreationScreen when entering a existing world
@@ -56,14 +50,16 @@ scheduler:ExecuteInTime(0, function()  -- Delay a frame so we can get ServerCrea
             servercreationscreen.world_config_tabs.menu.items[i + 1]:SetText(text)
         end
 
-        if not world_tab.choose_world_button then
-            world_tab.choose_world_button = world_tab.settings_root:AddChild(TEMPLATES.StandardButton(function() OnWorldButton(world_tab, i) end, STRINGS.UI.SANDBOXMENU.CHOOSEWORLD))
-            world_tab.choose_world_button.image:SetScale(.47)
-            world_tab.choose_world_button.text:SetColour(0, 0, 0, 1)
-            world_tab.choose_world_button:SetTextSize(19.6)
-            world_tab.choose_world_button:SetPosition(320, 285)
-        elseif not world_tab.choose_world_button.shown then
-            world_tab.choose_world_button:Show()
+        if world_tab.settings_widget:IsNewShard() then
+            if not world_tab.choose_world_button then
+                world_tab.choose_world_button = world_tab.settings_root:AddChild(TEMPLATES.StandardButton(function() OnWorldButton(world_tab, i) end, STRINGS.UI.SANDBOXMENU.CHOOSEWORLD))
+                world_tab.choose_world_button.image:SetScale(.47)
+                world_tab.choose_world_button.text:SetColour(0, 0, 0, 1)
+                world_tab.choose_world_button:SetTextSize(19.6)
+                world_tab.choose_world_button:SetPosition(320, 285)
+            elseif not world_tab.choose_world_button.shown then
+                world_tab.choose_world_button:Show()
+            end
         end
     end
 end)
