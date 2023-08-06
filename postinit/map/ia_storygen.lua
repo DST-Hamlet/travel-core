@@ -460,11 +460,14 @@ function Story:IA_GenerateNodesFromTasks(linkFn)
     local start_node_data = {id = "START"}
 
     if self.gen_params.start_node ~= nil then
+        print("Has start node", self.gen_params.start_node)
         start_node_data.data = self:GetRoom(self.gen_params.start_node)
         start_node_data.data.terrain_contents = start_node_data.data.contents
     else
+        print("No start node! Createing a default room.")
         start_node_data.data = {
             value = WORLD_TILES.GRASS,
+            type = NODE_TYPE.Default,
             terrain_contents = {
                 countprefabs = {
                     spawnpoint = 1,
@@ -477,7 +480,6 @@ function Story:IA_GenerateNodesFromTasks(linkFn)
         }
     end
 
-    start_node_data.data.type = "START"
     start_node_data.data.colour = {r = 0, g = 1, b = 1, a = .80}
 
     if self.gen_params.start_setpeice ~= nil then
