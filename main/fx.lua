@@ -1,7 +1,19 @@
 local Assets = Assets
 GLOBAL.setfenv(1, GLOBAL)
 
+local function TintOceantFx(inst)
+    inst.AnimState:SetOceanBlendParams(TUNING.OCEAN_SHADER.EFFECT_TINT_AMOUNT)
+end
+
 local ia_fx = {
+    {
+        name = "splash_water_float",
+        bank = "splash_water_drop",
+        build = "splash_water_drop",
+        sound = "ia/common/item_float",
+        fn = TintOceantFx,
+        anim = "idle",
+    },
 }
 
 -- Sneakily add these to the FX table

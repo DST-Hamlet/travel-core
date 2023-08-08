@@ -4,6 +4,7 @@ local components_post = {
     "clock",
     "colourcube",
     "combat",
+    "floater",
     "health",
     "lootdropper",
     "playercontroller",

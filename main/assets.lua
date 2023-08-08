@@ -21,6 +21,9 @@ Assets = {
     Asset("ANIM", "anim/player_actions_shear.zip"),
     Asset("ANIM", "anim/player_idles_poison.zip"),
     Asset("ANIM", "anim/player_mount_idles_poison.zip"),
+
+    -- floater
+    Asset("ANIM", "anim/ripple_build.zip"),
 }
 
 ToolUtil.RegisterImageAtlas("images/ia_inventoryimages.xml")
