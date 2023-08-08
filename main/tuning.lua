@@ -35,6 +35,18 @@ local tuning = {
     WRATH_SMALL = -8,
     WRATH_LARGE = -16,
     WRATH_HUGE = -64,
+
+    WINDBLOWN_DESTROY_DIST = 15,  -- distance from player wind blown prefabs can be destroyed, fall over, get picked, etc
+    WINDBLOWN_SCALE_MIN = {
+        LIGHT = 0.1,
+        MEDIUM = 0.1,
+        HEAVY = 0.01,
+    },
+    WINDBLOWN_SCALE_MAX = {
+        LIGHT = 1.0,
+        MEDIUM = 0.25,
+        HEAVY = 0.05,
+    }
 }
 
 for key, value in pairs(tuning) do
