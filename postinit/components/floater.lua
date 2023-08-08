@@ -98,9 +98,9 @@ end
 
 local _OnLandedClient = Floater.OnLandedClient
 function Floater:OnLandedClient(...)
-	if not self.no_float_fx then
-		return _OnLandedClient(self, ...)
+    if not self.no_float_fx then
+        return _OnLandedClient(self, ...)
     else
         self.showing_effect = true
-	end
+    end
 end
