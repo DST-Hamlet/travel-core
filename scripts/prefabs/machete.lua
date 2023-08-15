@@ -44,7 +44,7 @@ local function pristinefn()
     inst:AddTag("weapon")
 
     MakeInventoryFloatable(inst)
-    -- inst.components.floater:UpdateAnimations("idle_water", "idle")
+    inst.components.floater:UpdateAnimations("idle_water", "idle")
 
     return inst
 end
