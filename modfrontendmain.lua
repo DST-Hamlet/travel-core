@@ -33,7 +33,7 @@ function ModManager:FrontendUnloadMod(modname, ...)
             OnUnloadMod()
         end
         ModManager.FrontendUnloadMod = _FrontendUnloadMod
-    else
+    elseif IACore.OnUnloadMods[modname] then
         IACore.OnUnloadMods[modname]()
     end
 
