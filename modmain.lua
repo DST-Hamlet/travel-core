@@ -11,7 +11,7 @@ modimport("main/tuning")
 modimport("main/constants")
 
 modimport("main/util")
-modimport("main/ocean_util")
+modimport("main/oceanutil")
 modimport("main/commands")
 modimport("main/standardcomponents")
 
