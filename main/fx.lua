@@ -1,6 +1,10 @@
 local Assets = Assets
 GLOBAL.setfenv(1, GLOBAL)
 
+local function FinalOffset1(inst)
+    inst.AnimState:SetFinalOffset(1)
+end
+
 local function TintOceantFx(inst)
     inst.AnimState:SetOceanBlendParams(TUNING.OCEAN_SHADER.EFFECT_TINT_AMOUNT)
 end
@@ -13,6 +17,14 @@ local ia_fx = {
         sound = "ia/common/item_float",
         fn = TintOceantFx,
         anim = "idle",
+    },
+    {
+        name = "shock_machines_fx",
+        bank = "shock_machines_fx",
+        build = "shock_machines_fx",
+        anim = "shock",
+        sound = "ia/creatures/jellyfish/electric_land",
+        fn = FinalOffset1,
     },
 }
 
