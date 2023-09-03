@@ -2,7 +2,7 @@ local modname = modname
 local modimport = modimport
 GLOBAL.setfenv(1, GLOBAL)
 
-IACore = {}
+TravelCore = {}
 
 modimport("main/toolutil")
 modimport("main/strings")
@@ -13,12 +13,12 @@ local TEMPLATES = require("widgets/redux/templates")
 local PopupDialogScreen = require("screens/redux/popupdialog")
 local ChooseWorldSreen = require("widgets/redux/chooseworldscreen")
 
-IACore.WorldLocations = {
+TravelCore.WorldLocations = {
     [1] = {FOREST = true, CAVE = true},
     [2] = {CAVE = true}
 }
 
-function IACore.SetLevelLocations(servercreationscreen, location, i)
+function TravelCore.SetLevelLocations(servercreationscreen, location, i)
     local server_level_locations = {}
     server_level_locations[i] = location
     server_level_locations[3 - i] = SERVER_LEVEL_LOCATIONS[3 - i]

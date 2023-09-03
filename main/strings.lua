@@ -70,7 +70,7 @@ local function ia_import(module_name, env)
     end
 end
 
-function IACore.LoadAndTranslateString(po_path, env)
+function TravelCore.LoadAndTranslateString(po_path, env)
     ToolUtil.merge_table(STRINGS, ia_import("common", env))
     local IsTheFrontEnd = rawget(_G, "TheFrontEnd") and rawget(_G, "IsInFrontEnd") and IsInFrontEnd()
     if not IsTheFrontEnd then
@@ -85,10 +85,10 @@ function IACore.LoadAndTranslateString(po_path, env)
     end
 
     local desiredlang = nil
-    local IACore_CONFIG = rawget(_G, "IACore_CONFIG")
-    if IACore_CONFIG and IACore_CONFIG.locale then
-        desiredlang = IACore_CONFIG.locale
-    elseif (IsTheFrontEnd or IACore_CONFIG) and LanguageTranslator.defaultlang then  -- only use default in FrontEnd or if locale is not set
+    local TravelCore_CONFIG = rawget(_G, "TravelCore_CONFIG")
+    if TravelCore_CONFIG and TravelCore_CONFIG.locale then
+        desiredlang = TravelCore_CONFIG.locale
+    elseif (IsTheFrontEnd or TravelCore_CONFIG) and LanguageTranslator.defaultlang then  -- only use default in FrontEnd or if locale is not set
         desiredlang = LanguageTranslator.defaultlang
     end
 
@@ -103,4 +103,4 @@ function IACore.LoadAndTranslateString(po_path, env)
     end
 end
 
-IACore.LoadAndTranslateString("scripts/languages/ia_", IAENV)
+TravelCore.LoadAndTranslateString("scripts/languages/ia_", IAENV)

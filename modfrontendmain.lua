@@ -1,9 +1,9 @@
 local _modname = modname
 GLOBAL.setfenv(1, GLOBAL)
 
-IACore.OnUnloadMods = {}
+TravelCore.OnUnloadMods = {}
 
-function IACore.OnUnloadlevel()
+function TravelCore.OnUnloadlevel()
     local servercreationscreen = TheFrontEnd:GetOpenScreenOfType("ServerCreationScreen")
 
     if not (servercreationscreen and servercreationscreen.world_tabs)  then
@@ -24,17 +24,17 @@ function IACore.OnUnloadlevel()
     end
 end
 
-IACore.OnUnloadMods[_modname] = IACore.OnUnloadlevel
+TravelCore.OnUnloadMods[_modname] = TravelCore.OnUnloadlevel
 
 local _FrontendUnloadMod = ModManager.FrontendUnloadMod
 function ModManager:FrontendUnloadMod(modname, ...)
     if not modname or modname == _modname then
-        for _, OnUnloadMod in pairs(IACore.OnUnloadMods) do
+        for _, OnUnloadMod in pairs(TravelCore.OnUnloadMods) do
             OnUnloadMod()
         end
         ModManager.FrontendUnloadMod = _FrontendUnloadMod
-    elseif IACore.OnUnloadMods[modname] then
-        IACore.OnUnloadMods[modname]()
+    elseif TravelCore.OnUnloadMods[modname] then
+        TravelCore.OnUnloadMods[modname]()
     end
 
     return _FrontendUnloadMod(self, modname, ...)
