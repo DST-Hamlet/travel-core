@@ -31,8 +31,8 @@ local ChooseWorldSreen = Class(Screen, function(self, parent_widget, currentworl
     Screen._ctor(self, "ChooseWorldSreen")
 
     self.parent_widget = parent_widget
-    self.onconfirmfn = IACore.SetLevelLocations
-    self.locations = IACore.WorldLocations
+    self.onconfirmfn = TravelCore.SetLevelLocations
+    self.locations = TravelCore.WorldLocations
     self.worlds = {}
     self.index = i
 

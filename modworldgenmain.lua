@@ -7,7 +7,7 @@ if IsTheFrontEnd then
 end
 -- when start worldgen
 
-IACore = {}
+TravelCore = {}
 
 modimport("main/toolutil")
 modimport("main/tiledefs")

@@ -29,6 +29,6 @@ local function SortAfter(a, b, filter_name)  -- a after b
     SortRecipe(a, b, filter_name, 1)
 end
 
-IACore.SortRecipe = SortRecipe
-IACore.SortBefore = SortBefore
-IACore.SortAfter = SortAfter
+TravelCore.SortRecipe = SortRecipe
+TravelCore.SortBefore = SortBefore
+TravelCore.SortAfter = SortAfter
