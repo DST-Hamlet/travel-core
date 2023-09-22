@@ -4,6 +4,25 @@ GLOBAL.setfenv(1, GLOBAL)
 ToolUtil = {}
 IAENV.ToolUtil = ToolUtil
 
+local hidefns = {}
+function ToolUtil.HideFn(hidefn, realfn)
+    hidefns[hidefn] = realfn
+end
+
+local _debug_getupvalue = debug.getupvalue
+function debug.getupvalue(fn, ...)
+    local rets = {_debug_getupvalue(hidefns[fn] or fn, ...)}
+    return unpack(rets)
+end
+ToolUtil.HideFn(debug.getupvalue, _debug_getupvalue)
+
+local _debug_setupvalue = debug.setupvalue
+function debug.setupvalue(fn, ...)
+    local rets = {_debug_setupvalue(hidefns[fn] or fn, ...)}
+    return unpack(rets)
+end
+ToolUtil.HideFn(debug.setupvalue, _debug_setupvalue)
+
 function ToolUtil.GetUpvalue(fn, name, recurse_levels)
     assert(type(fn) == "function")
 

@@ -19,6 +19,7 @@ local languages = {
     sc = "chinese_s", -- simple chinese
     tc = "chinese_t", -- traditional chinese
     cht = "chinese_t",  -- traditional chinese
+    zht = "chinese_t",  -- traditional chinese
 }
 
 local speech = {
