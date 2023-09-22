@@ -36,6 +36,7 @@ local brains_post = {
 }
 
 local widgets = {
+    "healthbadge"
 }
 
 local sim_post = {

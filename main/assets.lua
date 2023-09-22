@@ -22,6 +22,8 @@ Assets = {
     Asset("ANIM", "anim/player_idles_poison.zip"),
     Asset("ANIM", "anim/player_mount_idles_poison.zip"),
 
+    Asset("ANIM", "anim/poison_meter_overlay.zip"),
+
     -- floater
     Asset("ANIM", "anim/ripple_build.zip"),
 }
